@@ -1,0 +1,18 @@
+# Hard-hat detection dataset
+#
+# Built by merging public hard-hat datasets (Roboflow, Kaggle, HuggingFace, SH17,
+# Mendeley) with frames sampled from the deployment cameras, then re-labelled to a
+# single two-class scheme in CVAT and exported in YOLO format.
+#
+# The images themselves are not in this repository. Point `path` at your local copy;
+# scripts/ will build the directory structure below for you.
+
+path: ../datasets/helmet     # relative to this file, or an absolute path
+train: images/train
+val: images/val
+test: images/test
+
+nc: 2
+names:
+  0: helmet
+  1: no_helmet
